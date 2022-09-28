@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    padding: 8px 5px 8px 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.navbar-brand-right {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: .28%;
+    display: inline;
+    float: right;
+}
+
+.navbar-brand-right-base {
+    font-size: 1.2em;
+    font-weight: 600;
+    float: right;
+    border-left: 30px;
+    margin-left: 30px;
+}
+
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+}
+
+.body-content {
+    padding: 5px;
+    font-family: 'Poppins'; 
+}
+
+#singup-nav {
+    border-radius: 2mm;
+    background-color: rgb(255, 240, 0);
+}
+
+/* *customizing  */
+
+
+/* ! Tittle */
+
+.Tittle {
+    font-family: 'Patrick Hand';
+    text-align: right;
+    margin-right: 3%;
+    font-size: 1000%;
+}
+
+.Tittle-Div {
+    background-image: url(/img/WEB-1-tTittle_Div.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19cm;
+}
+
+input {
+    border-radius: 8px;
+    border-color: inherit;
+    border-style: none;
+    height: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+mail { 
+    color: rgb(52, 52, 216)
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+}
+
+#logout,#darkmode {
+    /* color: black; */
+    font-size: 1.2em;
+    font-weight: 600;
+    float: right;
+    border-right: 10px;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: rgb(0, 0, 0);
+    margin-left: 2%;
+}
+
+a {
+    color: rgb(0, 81, 255);
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+
+p.subfordoc {
+    font-size: 20px;
+}
+
+h1.doc {
+    padding-bottom: 2px;
+}
+
+.btn-default {
+    border-radius: 1.5mm;
+    background-color: #E8F0FE;
+    border-style: none;
+}
+
+/* All Conversion pages */
+.Ans-block {
+    background-color: rgb(255, 240, 0);
+    width: 60%;
+    min-height: 15.5cm;
+    max-height: 16.3cm;
+    height: auto;
+    border-radius: 5mm;
+    margin-left: .5%;
+    display: inline-block;
+}
+
+.Legend-block {
+    background-color: rgb(255, 240, 0);
+    width: 35%;
+    height: auto;
+    border-radius: 5mm;
+    margin-left: 4%;
+    margin-top: .5%;
+    margin-bottom: 2%;
+    display: inline-block;
+    position: absolute;
+}
+
+.ans-text.ans-text-NUM {
+    margin-left: 1%;
+}
+
+.Legend-text {
+    margin-left: 1%;
+}
+
+p.ans-footer {
+    text-align: center;
+}
+
+/* MEMBERSHIP PAGE */
+
+div.membership-page {
+    background-color: rgb(255, 219, 87);
+    width: 25%;
+    height: auto;
+    border-radius: 5mm;
+    display: inline-block;
+
+}
+
+div #free {
+    /* margin-left: 12.5%; */
+    margin-left: 25%;
+}
+
+.Membership-page-normal_text {
+    font-size: large;
+    font-weight: 500;
+}
+
+.Membership-page-text {
+    padding: 5%;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.Membership-page-text-list {
+    padding: 5%;
+    padding-left: 5%;
+    text-align: left;
+}
+
+.Membership-page-h2_tittles {
+    font-size: .8cm;
+}
+
+#top {
+    padding-top: 4cm;
+    font-size: .8cm;
+}
+
+.Membership-page-tittle {
+    text-align: center;
+    font-size: 1cm;
+}
+
+/* Conventions, Program, tri programs */
+.Program-link {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    font-weight: 500;
+    font-size: large;
+}
+
+/* PA Program*/
+
+.btne {
+    background-color: rgb(122, 63, 63);
+    
+}
+
+.Equal {
+    display: inline;
+}
+
+/* Dropdown css */
+
+/* Dropdown Button */
+.dropbtn {
+    /* color: white; */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 30px;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15%;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover
+  .dropdown-content a:hover 
+  {
+    background-color: #ddd;
+    
+  } */
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: rgb(88, 86, 86);}

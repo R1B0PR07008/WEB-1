@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} Wavelength | V, λ, F Program</h1> 
+
+<body>
+ <form action="" method="post">
+  <input type="float" placeholder="λ" name="ro" value="{{ request.form.ro }}" />
+  <input type="float" placeholder="V" name="m" value="{{ request.form.m }}" />
+  <input type="float" placeholder="F" name="v" value="{{ request.form.v }}" />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+  {% if request.form['submit'] != 'Enter':  %}
+  <p class="ans-footer">
+  To get your answer enter a number in the indicated slots.
+  </p>
+  {% endif %}
+  {% if request.form.submit == 'Enter': %}
+  <p>Velocity/speed (V): {{ m }}</p>
+  <p>Wavelength (λ) {{ v }}</p>
+  <p>Force (F): {{ ro }}</p>
+  {% endif %} 
+</div>
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+   <p class="Legend-text"> V = Velocity/Speed </p>
+  <p class="Legend-text"> λ (lamda) = Wavelength </p>
+  <p class="Legend-text"> F = Force </p>
+</div>
+ 
+</body>
+
+
+</html>

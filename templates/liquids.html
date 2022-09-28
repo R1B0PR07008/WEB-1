@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} Liquids Program
+</h1>
+<body>
+  
+<form action="" method="post">
+  <input
+    type="float"
+    placeholder="Number"
+    name="num"
+    value="{{ request.form.num }}"
+  />
+  <br />
+  <input
+    type="text"
+    placeholder="Unit"
+    name="unit"
+    value="{{ request.form.unit }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+  {% if request.form['submit2'] != 'Enter':  %}
+  <p class="ans-footer">
+  To get your answer enter a number in the left slot and the value.
+  </p>
+  {% endif %}
+  {% if request.form.unit == 'l': %}
+  <p class="ans-text">L to CL: {{ lcl }}</p>
+  <p class="ans-text">L to ML: {{ lml }}</p>
+  <p class="ans-text">L to OZ: {{ loz }}</p>
+  {% endif %} {% if request.form.unit == 'cl': %}
+  <p class="ans-text">CL to L: {{ cll }}</p>
+  <p class="ans-text">CL to ML: {{ clml }}</p>
+  <p class="ans-text">CL to OZ: {{ cloz }}</p>
+  {% endif %} {% if request.form.unit == 'ml': %}
+  <p class="ans-text">ML to L: {{ mll }}</p>
+  <p class="ans-text">ML to CL: {{ mlcl }}</p>
+  <p class="ans-text">ML to OZ: {{ mloz }}</p>
+  {% endif %} {% if request.form.unit == 'oz': %}
+  <p class="ans-text">OZ to L: {{ ozl }}</p>
+  <p class="ans-text">OZ to CL: {{ ozcl }}</p>
+  <p class="ans-text">OZ to ML: {{ ozml }}</p>
+  {% endif %}
+</div>
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> L = Liter/litro </p>
+  <p class="Legend-text"> CL = Centiliter/Centilitro </p>
+  <p class="Legend-text"> ML = Mililitre/Mililitro </p>
+  <p class="Legend-text"> OZ = Ounce/Onza </p>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} #R4 Parallel Circuit
+</h1>
+<body>
+  
+
+<form action="" method="post">
+  <input
+    type="float"
+    placeholder="R1"
+    name="r1"
+    value="{{ request.form.r1 }}"
+  />
+  <input
+    type="float"
+    placeholder="R2"
+    name="r2"
+    value="{{ request.form.r2 }}"
+  />
+  <input
+    type="float"
+    placeholder="R3"
+    name="r3"
+    value="{{ request.form.r3 }}"
+  />
+  <input
+    type="float"
+    placeholder="R4"
+    name="r4"
+    value="{{ request.form.r4 }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+  {% if request.form['submit'] != 'Enter':  %}
+  <p class="ans-footer">
+    To get your answer enter a number in the indicated slots.
+  </p>
+  {% endif %}
+  {% if request.form['submit'] == 'Enter':%}
+<p>Equivalent Resistance: {{ re }}</p>
+{% endif %}
+</div>
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> R1 = first Resistor </p>
+  <p class="Legend-text"> R2 = Second Resistor </p>
+  <p class="Legend-text"> R3 = Third Resistor </p>  
+  <p class="Legend-text"> R4 = Fourth Resistor </p>  
+  <h3 class="Legend-text"> Requirements and Use Instructions: </h3>
+  <p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p>
+</div>
+</body>
+</html>

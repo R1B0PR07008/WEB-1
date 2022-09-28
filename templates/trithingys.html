@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<body>
+  <h1>{% block title %} Triangle Formulas Programs
+</h1>
+  <form action="" method="post">
+    <input
+      type="text"
+      placeholder="Selec Triangle Formula"
+      name="function"
+      value="{{ request.form.fucntion }}"
+    />
+    <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+  </form>
+
+  <h1>Types of Triangle Formulas</h1>
+  <a class="Program-link" href="{{url_for('ro')}}">Density | M, ρ, V (ro)</a>
+  <br />
+  <a class="Program-link" href="{{url_for('EC')}}">EC | F, E, Q (EC)</a>
+  <br />
+  <a class="Program-link" href="{{url_for('Q')}}">Charge | Q, I, T (Q)</a>
+  <br />
+  <a class="Program-link" href="{{url_for('V')}}">Voltage | V, R, I (V)</a>
+  <br />
+  <a class="Program-link" href="{{url_for('V2')}}"
+    >Voltage^2 | V^2, P, R (V2)</a
+  >
+  <br />
+  <a class="Program-link" href="{{url_for('forces')}}">Forces | W, F, D (F)</a>
+  <br />
+  <a class="Program-link" href="{{url_for('acceleration')}}"
+    >Acceleration | F, M, A (A)</a
+  >
+  <br />
+  <a class="Program-link" href="{{url_for('lamda')}}"
+    >Wave Length | V, λ, F (WL)</a
+  >
+</body>
+
+</html>

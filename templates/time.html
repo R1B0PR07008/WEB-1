@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>Time</title>
+  <br />
+</head>
+<h1>{% block title %} time Program
+</h1>
+<body>
+  
+
+<form action="" method="post">
+  <input
+    type="float"
+    placeholder="Number"
+    name="num"
+    value="{{ request.form.num }}"
+  />
+  <input
+    type="text"
+    placeholder="Unit"
+    name="unit"
+    value="{{ request.form.unit }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+  {% if request.form['submit2'] != 'Enter':  %}
+  <p class="ans-footer">
+  To get your answer enter a number in the left slot and the value.
+  </p>
+  {% endif %}
+{% if request.form.unit == 's': %}
+<p class="ans-text">S to M: {{ sm }}</p>
+<p class="ans-text">S to H: {{ sh }}</p>
+{% endif %} {% if request.form.unit == 'm': %}
+<p class="ans-text">M to S: {{ ms }}</p>
+<p class="ans-text">M to H: {{ mh }}</p>
+{% endif %} {% if request.form.unit == 'h': %}
+<p class="ans-text">H to S: {{ hs }}</p>
+<p class="ans-text">H to M: {{ hm }}</p>
+{% endif %} 
+</div>
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> S = Second/Segundo </p>
+  <p class="Legend-text"> M = Minute/Minuto </p>
+  <p class="Legend-text"> H = Hours/Horas </p>
+</div>
+</body>
+</html>

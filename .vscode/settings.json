@@ -1,0 +1,6 @@
+{
+    "html.validate.styles": false,
+    "editor.fastScrollSensitivity": 5,
+    "editor.mouseWheelScrollSensitivity": 2,
+    "files.autoSave": "onFocusChange"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} Quadratic Fucntions Program
+
+</h1>
+<body>
+  
+
+<form action="" method="post">
+  <input type="float" placeholder="A" name="a" value="{{ request.form.a }}" />
+  <input type="float" placeholder="B" name="b" value="{{ request.form.b }}" />
+  <input type="float" placeholder="C" name="c" value="{{ request.form.c }}" />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+  <input
+    class="btn btn-default"
+    type="submit"
+    name="submit2"
+    value="Enter More X Values"
+  />
+</form>
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+  {% if request.form['submit'] != 'Enter':  %}
+  <p class="ans-footer">
+    To get your answer enter a number in the indicated slots.
+  </p>
+  {% endif %}
+  {% if request.form['submit'] == 'Enter':  %}
+  <p>Your first X value is: {{ x1 }}</p>
+  <p>Your first Y value is: {{ y1 }}</p>
+  {% endif %}
+</div>
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> A = A </p>
+  <p class="Legend-text"> B = B </p>
+  <p class="Legend-text"> C = C </p>
+  <h3 class="Legend-text"> Requirements and Use Instructions: </h3>
+  <p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p>
+  <p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
+</div>
+</body>
+
+</html>

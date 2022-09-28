@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<body>
+  <h1>{% block title %} PA Program
+</h1>
+  
+
+  <p>Pressure Formula program</p>
+  <form action="" method="post">
+    <input
+      type="float"
+      placeholder="F1"
+      name="f1"
+      value="{{ request.form.f1 }}"
+    />
+    <p class="Equal">=</p>
+    <input
+      type="float"
+      placeholder="F2"
+      name="f2"
+      value="{{ request.form.f2 }}"
+    />
+    <br />
+    <input
+      type="float"
+      placeholder="A1"
+      name="a1"
+      value="{{ request.form.a1 }}"
+    />
+    <p class="Equal">=</p>
+    <input
+      type="float"
+      placeholder="A2"
+      name="a2"
+      value="{{ request.form.a2 }}"
+    />
+    <input
+      class="btn btn-default"
+      type="submit"
+      name="submit"
+      value=" Calculate"
+    />
+  </form>
+
+  
+  <div class="Ans-block">
+    <h2 class="ans-text">
+      The answer: 
+    </h2>
+    {% if request.form['submit'] != ' Calculate':  %}
+    <p class="ans-footer">
+    To get your answer enter a number in the left slot and the value.
+    </p>
+    {% endif %}
+    {% if request.form.submit == ' Calculate': %}
+    <p class="ans-text">F1: {{f1}}</p>
+    <p class="ans-text">F2: {{f2}}</p>
+    <p class="ans-text">A1: {{a1}}</p>
+    <p class="ans-text">A2: {{a2}}</p>
+    {% endif %}
+  </div>
+
+  <div class="Legend-block">
+    <h2 class="Legend-text"> The Legend: </h2>
+    <p class="Legend-text"> F1 = Force 1 </p>
+    <p class="Legend-text"> A1 = Area 1 </p>
+    <p class="Legend-text"> F2 = Force 2 </p>
+    <p class="Legend-text"> A2 = Area 2 </p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>
+  {% block title %} Equivalent Resistance (Parallel Circuit) </h1>
+  <body>
+<form action="" method="post">
+  <input
+    type="float"
+    placeholder="number of Resistors"
+    name="numR"
+    value="{{ request.form.numR }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+<h2> Number of Resistors </h2>
+<a href="{{url_for('re2pl')}}" class="Program-link">2 Resistors</a>
+<br />
+<a href="{{url_for('re3pl')}}" class="Program-link">3 Resistors</a>
+<br>
+<a href="{{url_for('re4pl')}}" class="Program-link">4 Resistors</a>
+<br />
+<a href="{{url_for('re5pl')}}" class="Program-link">5 Resistors</a>
+
+  
+</body>
+</html>

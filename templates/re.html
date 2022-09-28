@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<body>
+  
+
+<h1>{% block title %} Equivalent Resistance Program
+</h1>
+<form action="" method="post">
+  <input
+    type="text"
+    placeholder="SR or PL"
+    name="Circuittype"
+    value="{{ request.form.Circuittype }}"
+  />
+</form>
+
+<h1>Types of Circuits</h1>
+<a href="{{url_for('resr')}}" class="Program-link">Series Circuit (sr)</a>
+<br />
+<a href="{{url_for('repl')}}" class="Program-link">Parallel Circuit (pl)</a>
+</body>
+</html>

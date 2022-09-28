@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} Program
+</h1>
+<body>
+  
+
+<h4>Please Remember it is very sensible to all simbols</h4>
+<form action="" method="post">
+  <input
+    type="text"
+    placeholder="function"
+    name="function"
+    value="{{ request.form.function }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+{% if error: %}
+<p class="error"><strong>Error:</strong> {{ error }} {% endif %}</p>
+
+<h2>The current programs are:</h2>
+<a class="Program-link" href="{{url_for('re')}}">RE (re)</a>
+<br />
+<a class="Program-link" href="{{url_for('qf')}}">Quadratic Functions (qf)</a>
+<br />
+<a class="Program-link" href="{{url_for('qf2')}}"
+  >Quadratic Functions | Graphing (qfx)</a
+>
+<br />
+<a class="Program-link" href="{{url_for('Pa')}}">Pressure Program (pa)</a>
+</body>
+</html>

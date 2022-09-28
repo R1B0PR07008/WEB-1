@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+</head>
+<h1>Length Program
+</h1>
+
+<body>
+ <form action="" method="post">
+  <input
+    type="float"
+    placeholder="Number"
+    name="len"
+    id="NUM-LEN"
+  />
+  <input
+    type="text"
+    placeholder="Unit"
+    name="unit"
+    id="UNIT-LEN"
+  />
+  <br />
+  <button onclick="Len()" class="btn-default" type="button" id="BTN-1-LEN">Enter</button>
+</form>
+
+<div class="Ans-block">
+  <h2 class="ans-text">
+    The answer: 
+  </h2>
+<div id="BTN-1-LEN-IF">
+    <p class="ans-footer">
+  To get your answer enter a number in the left slot and the value.
+  </p>
+</div>
+
+<div id="main-text-len">
+
+</div>
+  <div id="ans">
+  <p class="ans-text" > <span class="len-1-text"></span> <span id="01-len"></span></p>
+  <p class="ans-text" > <span class="len-2-text"></span> <span id="02-len"></span></p>
+  <p class="ans-text" > <span class="len-3-text"></span> <span id="03-len"></span></p>
+  <p class="ans-text" > <span class="len-4-text"></span> <span id="04-len"></span></p>
+  <p class="ans-text" > <span class="len-5-text"></span> <span id="05-len"></span></p>
+  <p class="ans-text" > <span class="len-6-text"></span> <span id="06-len"></span></p>
+  <h2 class="ans-text">Formulas</h2>
+  <p class="ans-text"> <span class="len-1-text"></span> <span class="ans-text-NUM"></span> <span id="len-1-formula"></span></p>
+  <p class="ans-text"> <span class="len-2-text"></span> <span class="ans-text-NUM"></span> <span id="len-2-formula"></span></p>
+  <p class="ans-text"> <span class="len-3-text"></span> <span class="ans-text-NUM"></span> <span id="len-3-formula"></span></p>
+  <p class="ans-text"> <span class="len-4-text"></span> <span class="ans-text-NUM"></span> <span id="len-4-formula"></span></p>
+  <p class="ans-text"> <span class="len-5-text"></span> <span class="ans-text-NUM"></span> <span id="len-5-formula"></span></p>
+  <p class="ans-text"> <span class="len-6-text"></span> <span class="ans-text-NUM"></span> <span id="len-6-formula"></span></p>
+  </div>
+</div>
+
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> M = Meter/Metro </p>
+  <p class="Legend-text"> KM = Kilometer/Kilometro </p>
+  <p class="Legend-text"> CM = Cetimeter/Centimetro </p>
+  <p class="Legend-text"> FT = Feet/Pies </p>
+  <p class="Legend-text"> YD = Yards/yardas </p>
+  <p class="Legend-text"> MI = Miles/Millas</p>
+</div>   
+</body>
+<script src="/site.js"></script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/site.css"
+  />
+  <title>!</title>
+  <script src="/site.js"></script>
+</head>
+<h1>{% block title %} Mass Program
+</h1>
+<body>
+  
+
+<form action="" method="post">
+  <input
+    type="float"
+    placeholder="Number"
+    name="num"
+    value="{{ request.form.num }}"
+  />
+  <input
+    type="text"
+    placeholder="Unit"
+    name="unit"
+    value="{{ request.form.unit }}"
+  />
+  <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+</form>
+
+
+  {% if request.form.unit == 'kg': %}
+  <p class="ans-text">KG to G: {{ kgg }}</p>
+  <p class="ans-text">KG to MG: {{ kgmg }}</p>
+  <p class="ans-text">KG to LBS: {{ kglbs }}</p>
+  <p class="ans-text">KG to TON: {{ kgton }}</p>
+  {% endif %} {% if request.form.unit == 'g': %}
+  <p class="ans-text">G to KG: {{ gkg }}</p>
+  <p class="ans-text">G to MG: {{ gmg }}</p>
+  <p class="ans-text">G to LBS: {{ glbd }}</p>
+  <p class="ans-text">G to TON: {{ gton }}</p>
+  {% endif %} {% if request.form.unit == 'mg': %}
+  <p class="ans-text">MG to KG: {{ mgkg }}</p>
+  <p class="ans-text">MG to G: {{ mgg }}</p>
+  <p class="ans-text">MG to LBS: {{ mglbs }}</p>
+  <p class="ans-text">MG to TON: {{ mgton }}</p>
+  {% endif %} {% if request.form.unit == 'lbs': %}
+  <p class="ans-text">LBS to KG: {{ lbskg }}</p>
+  <p class="ans-text">LBS to G: {{ lbsg }}</p>
+  <p class="ans-text">LBS to MG: {{ lbsmg }}</p>
+  <p class="ans-text">LBS to TON: {{ lbston }}</p>
+  {% endif %} {% if request.form.unit == 'ton': %}
+  <p class="ans-text">TON to KG: {{ tonkg }}</p>
+  <p class="ans-text">TON to G: {{ tong }}</p>
+  <p class="ans-text">TON to MG: {{ tonmg }}</p>
+  <p class="ans-text">TON to LBS: {{ tonlbs }}</p>
+  {% endif %} 
+
+<div class="Legend-block">
+  <h2 class="Legend-text"> The Legend: </h2>
+  <p class="Legend-text"> KG = Kilogram/Kilogramo </p>
+  <p class="Legend-text"> G = Gram/Gramo </p>
+  <p class="Legend-text"> MG = Miligram/Miligramo </p>
+  <p class="Legend-text"> LBS = Pound/Libra </p>
+  <p class="Legend-text"> TON = Ton/Tonelada Americana </p>
+</div>
+</body>
+
+</html>
